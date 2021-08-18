@@ -1,29 +1,29 @@
 <router-outlet></router-outlet>
-<h1>Send An SMS from Spring Boot Application</h1>
+
 <div class="smsDiv">
- 
+  <h1>Send An SMS from Spring Boot Application</h1>
   <form>
     <tr>
-      <td class="form-control">Customer Details</td>
+      <td>Customer Details</td>
       <td>
-        <input  class="form-control" type="text" name="customer_details"  [(ngModel)]="sms.customer_details"> 
+        <input class="smsNames"  type="text" name="customer_details"  [(ngModel)]="sms.customer_details"> 
       </td>
       </tr>
       <tr>
         <td>Phone Number</td>
-      <td><input type="text" name="phone_number"  [(ngModel)]="sms.phone_number"> </td>
+      <td><input  class="smsNames" type="text" name="phone_number"  [(ngModel)]="sms.phone_number"> </td>
       </tr>
       <tr>
         <td>Comments</td>
-      <td><textarea name="comments"  [(ngModel)]="sms.comments"></textarea> </td>
+      <td><textarea class="smsNamesText" name="comments"  [(ngModel)]="sms.comments"></textarea> </td>
       </tr>
       <tr>
         <td>Order Details</td>
-      <td><input name="order_details"  [(ngModel)]="sms.order_details"> </td>
+      <td><input  class="smsNames" name="order_details"  [(ngModel)]="sms.order_details"> </td>
       </tr>
       <tr>
         <td>Customer Requirements</td>
-      <td><input name="customer_requirments"  [(ngModel)]="sms.customer_requirments"></td>
+      <td><input  class="smsNames" name="customer_requirments"  [(ngModel)]="sms.customer_requirments"></td>
     </tr>
     <button class="senSMS" type="submit" value="Send" (click)="sendSMS()">Send</button>
   </form>
